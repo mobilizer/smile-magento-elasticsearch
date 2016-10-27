@@ -28,7 +28,10 @@ class Smile_ElasticSearch_Block_Catalogsearch_Result extends Mage_CatalogSearch_
         if (!$this->getData('result_count')) {
             $productCollection = $this->_getProductCollection();
             $size = $productCollection->getSize();
-            if ($productCollection->isSpellchecked()) {
+            // In fallback case when ES server is down: in default result collection isSpellchecked() is not available
+            if (get_class($productCollection) == 'Smile_ElasticSearch_Model_Resource_Catalog_Product_Collection'
+                && $productCollection->isSpellchecked()
+            ) {
                 $this->_getQuery()->setNumResults(0);
             } else {
                 $this->_getQuery()->setNumResults($size);
