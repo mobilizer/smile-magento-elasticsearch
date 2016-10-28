@@ -12,3 +12,4 @@ src/js/smile/*                                             js/smile/
 src/lib/*                                                  lib/
 src/skin/frontend/base/default/css/smile/*                 skin/frontend/base/default/css/smile/
 src/skin/frontend/rwd/default/css/smile/*                  skin/frontend/rwd/default/css/smile/
+src/skin/frontend/rwd/default/scss/module/smile/*          skin/frontend/rwd/default/scss/module/smile/
