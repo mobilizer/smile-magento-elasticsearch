@@ -216,7 +216,11 @@ abstract class Smile_ElasticSearch_Model_Resource_Engine_Elasticsearch_Query_Abs
         }
 
         Varien_Profiler::start('ES:EXECUTE:QUERY');
-        $response = $this->getClient()->search($query);
+        try {
+            $response = $this->getClient()->search($query);
+        } catch (Exception $e) {
+            $response['error'] = $e->getMessage();
+        }
         Varien_Profiler::stop('ES:EXECUTE:QUERY');
 
         if (!isset($response['error'])) {
