@@ -137,6 +137,20 @@ class Smile_ElasticSearch_Helper_Data extends Mage_Core_Helper_Abstract
     }
 
     /**
+     * Checks if configured layer engine is active.
+     *
+     * @return bool
+     */
+    public function isActiveLayerEngine()
+    {
+        $layerengine = $this->getSearchConfigData('elasticsearch_layerengine');
+        if ($layerengine && $this->isActiveEngine()) {
+            return true;
+        }
+        return false;
+    }
+
+    /**
      * Checks if debug mode is enabled.
      *
      * @return bool

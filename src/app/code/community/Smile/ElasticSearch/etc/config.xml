@@ -269,6 +269,7 @@
     <default>
         <catalog>
             <search>
+                <elasticsearch_layerengine>0</elasticsearch_layerengine>
                 <elasticsearch_enable_debug_mode>0</elasticsearch_enable_debug_mode>
                 <elasticsearch_servers>127.0.0.1:9200</elasticsearch_servers>
                 <elasticsearch_timeout>30</elasticsearch_timeout>

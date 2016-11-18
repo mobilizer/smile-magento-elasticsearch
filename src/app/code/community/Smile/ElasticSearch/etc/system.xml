@@ -34,6 +34,16 @@
                             <show_in_website>0</show_in_website>
                             <show_in_store>0</show_in_store>
                         </engine>
+                        <elasticsearch_layerengine translate="label" module="smile_elasticsearch">
+                            <label>Use ElasticSearch for Layered Navigation</label>
+                            <comment>Enable ElasticSearch as Layered Navigation engine</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </elasticsearch_layerengine>
                         <elasticsearch_enable_debug_mode translate="label comment" module="smile_elasticsearch">
                             <label>Enable Debug Mode</label>
                             <frontend_type>select</frontend_type>
