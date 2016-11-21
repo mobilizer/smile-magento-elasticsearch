@@ -1,3 +1,8 @@
+Changes to Smile
+=======
+- ADD configuration to only use ElasticSearch for Search/Autocomplete and disable it for Layered Navigation
+- FIX Fallback to Magento Default search engine if ElasticSearch server is not available.
+
 Magento 2.x support :
 =====================
 
