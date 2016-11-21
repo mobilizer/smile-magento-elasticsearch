@@ -83,7 +83,7 @@ class Smile_ElasticSearch_Model_Observer
      */
     public function resetCurrentSearchLayer(Varien_Event_Observer $observer)
     {
-        if (Mage::helper('smile_elasticsearch')->isActiveLayerEngine()) {
+        if (Mage::helper('smile_elasticsearch')->isActiveEngine()) {
             Mage::register('current_layer', Mage::getSingleton('smile_elasticsearch/catalogsearch_layer'));
         }
 
